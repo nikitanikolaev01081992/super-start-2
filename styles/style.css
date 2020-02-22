@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+}
+
+
 body {
     font-family: "Oswald", sans-serif;
     font-size: 18px;
@@ -33,6 +38,8 @@ h2 {
 .wrapper {
     max-width: 1110px;
     margin: 0 auto;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .wrapper-gray {
@@ -44,9 +51,21 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 243px 0;
+    /* padding: 243px 0; */
     text-align: center;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
 }
+
+
+.title {
+    position: absolute;
+    top: calc(50% - 124px - 75px);
+    left: 0;
+    right: 0;
+}
+
 
 .stat {
     display: flex;
@@ -234,6 +253,7 @@ h2 {
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 55px;
+    margin-bottom: 120px;
 }
 
 .box-feedback > div {
@@ -276,6 +296,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin-bottom: 150px
 }
 
 
@@ -283,10 +304,8 @@ h2 {
     flex-basis: 25%;
     max-width: 25%;
     text-align: center;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 0.05em;
+    margin-top: 30px;
+    margin-left: -10px;
 }
 
 .footer-contact-info {
@@ -296,7 +315,21 @@ h2 {
 
 .footer-contact h3 {
     color: #999999;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    margin-top: 10px;
 }
+
+
+.footer-contact li {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    
+}
+
+
 
 .footer-contact-red {
     color: #f7654a;
@@ -306,22 +339,72 @@ h2 {
 
 .footer {
     background-color: #404149;
-    padding: 20px 0;
+    padding: 30px 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
     color: #FFFFFF;
-    letter-spacing: 0.05em;
 }
 
 .box-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1045px;
 }
 
 .box-footer a {
     color: #f7654a;
     text-decoration: none;
+}
+
+
+
+@media(max-width: 920px) {
+    body {
+        font-size: 14px;
+    }
+
+
+    .wrapper {
+        max-width: 600px;
+    }
+
+    .stat {
+        max-width: 500px;
+        margin: -100px auto 0;
+        padding-top: 30px;
+        padding-bottom: 15px;
+    }
+
+
+    h1 {
+        font-size: 34px;
+        max-width: 500px;
+        line-height: 70px;
+    }
+
+
+    .stat-item h3 {
+        font-size: 30px;
+    }
+
+    .stat-item h2 {
+        font-size: 55px;
+        margin-bottom: 10px;
+    }
+
+
+    .box-feedback {
+       flex-wrap: wrap;
+    }
+    
+    .box-feedback > div {
+        box-sizing: content-box;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+
 }
